@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D8b000003DDuR" method="POST">
+    <input type="hidden" name="orgid" value="00D8b000003DDuR">
+    <input type="hidden" name="retURL" value="http://barsaidar.github.io/Thank-You-Page">
+
+    <label for="name">Contact Name</label>
+    <input id="name" maxlength="80" name="name" type="text">
+
+    <label for="email">Email</label>
+    <input id="email" maxlength="80" name="email" type="text">
+
+    <label for="phone">Phone</label>
+    <input id="phone" maxlength="40" name="phone" type="text">
+
+    <label for="subject">Subject</label>
+    <input id="subject" maxlength="80" name="subject" type="text">
+
+    <label for="description">Description</label>
+    <textarea name="description"></textarea>
+
+    <input type="submit" name="submit">
+</form>
+
+</body>
+</html>
